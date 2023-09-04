@@ -5,7 +5,7 @@ from cryptography.fernet import Fernet
 from urllib.parse import urlparse
 from pick import pick
 
-print("\nThis application enables automatic downloading and importing of movies, TV shows, and anime into a Plex media library. It utilizes the Real Debrid API and Torrents magnet links. The primary objective of this project is to facilitate the swift and automated importation of entire seasons of TV shows or anime into Plex.\nIf you want to reset your settings, simply delete all the files expect for RDA.py.\n")
+print("\nThis application enables automatic downloading and importing of movies, TV shows, and anime into a Plex media library. It utilizes the Real Debrid API and Torrents magnet links. The primary objective of this project is to facilitate the swift and automated importation of entire seasons of TV shows or anime into Plex.\nIf you want to reset your settings, simply delete all the files except for RDA.py.\n")
 input("Press Enter to continue...")
 
 if os.path.exists("fernet.key"):
