@@ -32,7 +32,6 @@ else:
 
 f = Fernet(key)
 RD_API = f.decrypt(encrypted_RD_API).decode('utf-8')
-print(RD_API)
 
 if os.path.exists("plex_path"):
     with open("plex_path", "r") as file :
@@ -90,7 +89,6 @@ data_select_files = {"files" : "all"}
 
 post_magnet = requests.post(url+addMagnet, headers=header, data=data_magnet)
 post_magnet_json = post_magnet.json()
-print(post_magnet_json)
 tid = post_magnet_json['id']
 
 select_files = requests.post(url+selectFiles+tid, headers=header, data=data_select_files)
@@ -99,7 +97,6 @@ torrent = requests.get(url+torrents, headers=header)
 torrent_json = torrent.json()
 rd_links = (torrent_json[0]['links'])
 len_links = (len(rd_links))
-print(rd_links)
 
 dl_links = []
 
@@ -115,9 +112,9 @@ len_dl_links = len(dl_links)
 for i in range(len_dl_links):
     parsed_url = urlparse(dl_links[i])
     filename = os.path.basename(parsed_url.path)
-    print(f'Downloading {filename}...')
-    requests.get(dl_links[i])
+    print(f'\nDownloading {filename}...')
+    response = requests.get(dl_links[i])
     with open(filename, "wb") as file :
-        file.write(torrent.content)
+        file.write(response.content)
     shutil.move(filename, season_path)
     print(f'Downloaded {filename} successfully.')
