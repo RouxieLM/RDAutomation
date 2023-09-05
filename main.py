@@ -46,7 +46,7 @@ else:
         file.write(plex_path)
 
 title = "Please choose the type of media you want to import: "
-options = ['Films', 'Séries', 'Anime']
+options = ['Séries', 'Anime']
 
 option, index = pick(options, title, indicator='->', default_index=0)
 
@@ -137,12 +137,7 @@ for item in query_json:
         selected_thash = item['info_hash']
         selected_name = item['name']
 
-print(selected_thash)
-print(selected_name)
-
 encoded_dn = urllib.parse.quote(selected_name)
-
-print(encoded_dn)
 
 magnet = f"magnet:?xt=urn:btih:{selected_thash}&dn={encoded_dn}&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Feddie4.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce"
 
@@ -180,7 +175,7 @@ len_dl_links = len(dl_links)
 
 for i in range(len_dl_links):
     parsed_url = urlparse(dl_links[i])
-    filename = os.path.basename(parsed_url.path)
+    filename = urllib.parse.unquote(os.path.basename(parsed_url.path))
     print(f'\nDownloading {filename}...')
     response = requests.get(dl_links[i])
     with open(filename, "wb") as file :
