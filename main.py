@@ -5,7 +5,7 @@ from cryptography.fernet import Fernet
 from urllib.parse import urlparse
 from pick import pick
 
-print("\nThis application enables automatic downloading and importing of movies, TV shows, and anime into a Plex media library. It utilizes the Real Debrid API and Torrents magnet links. The primary objective of this project is to facilitate the swift and automated importation of entire seasons of TV shows or anime into Plex.\nIf you want to reset your settings, simply delete all the files except for main.py.\n")
+print("\nThis application enables automatic downloading and importing of movies, TV shows, and anime into a Plex media library. It utilizes the Real Debrid API and Torrents magnet links. The primary objective of this project is to facilitate the swift and automated importation of entire seasons of TV shows or anime into Plex.\n\nIf you want to reset your settings, simply delete all the files except for main.py.\n\n")
 input("Press Enter to continue...")
 
 if os.path.exists("fernet.key"):
@@ -50,8 +50,6 @@ show_name = input(f"Please provide the name of the {option}: ")
 
 if option == "Séries" or option == "Anime":
     season = input("Please provide which season you are importing, only type a number: ")
-else:
-    pass
 
 if os.path.exists(plex_path):
     show_path = os.path.join(plex_path, option, show_name)
@@ -72,8 +70,6 @@ if option == "Séries" or option == "Anime":
         print(f"successfully created {season_path} folder.")
     else:
         print(f'{season_path} folder already exists.')
-else:
-    pass
 
 magnet = input('Please provide the torrent magnet link: ')
 
