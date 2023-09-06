@@ -50,10 +50,10 @@ options = ['TV Shows', 'Anime']
 
 option, index = pick(options, title, indicator='->', default_index=0)
 
-show_name = input(f"Please provide the name of the {option}: ")
+show_name = input(f"Please provide the name of the {option}. This will be the name of the show's folder: ")
 
 if option == "TV Shows" or option == "Anime":
-    season = input("Please provide which season you are importing, only type a number: ")
+    season = input("Please provide which season you are importing, only type a number. This will be the season's folder: ")
 
 if os.path.exists(plex_path):
     show_path = os.path.join(plex_path, option, show_name)
@@ -67,7 +67,7 @@ else:
     print(f"{show_path} folder already exists.")
 
 if option == "TV Shows" or option == "Anime":
-    season_path = os.path.join(show_path, f'Saison {season}')
+    season_path = os.path.join(show_path, f'Season {season}')
 
     if not os.path.exists(season_path):
         os.makedirs(season_path)
@@ -78,7 +78,8 @@ if option == "TV Shows" or option == "Anime":
 qurl = "https://apibay.org/q.php?q="
 furl = "https://apibay.org/f.php?id="
 
-show_name = input('[Mandatory] Name of the show : ')
+print('\nYou will now search for the desired content. Try to be precise for simple show names like "Dark" for example, the search function is far from perfect for now. The app will first ask you for general terms, and then the season number if needed.\n')
+show_name = input('[Mandatory] What do you want to download ? Example : Dark x264 1080p\n')
 season = input('[Optionnal] Season (only the number) : ')
 
 if season:
