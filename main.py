@@ -46,13 +46,13 @@ else:
         file.write(plex_path)
 
 title = "Please choose the type of media you want to import: "
-options = ['Séries', 'Anime']
+options = ['TV Shows', 'Anime']
 
 option, index = pick(options, title, indicator='->', default_index=0)
 
 show_name = input(f"Please provide the name of the {option}: ")
 
-if option == "Séries" or option == "Anime":
+if option == "TV Shows" or option == "Anime":
     season = input("Please provide which season you are importing, only type a number: ")
 
 if os.path.exists(plex_path):
@@ -66,7 +66,7 @@ if not os.path.exists(show_path):
 else:
     print(f"{show_path} folder already exists.")
 
-if option == "Séries" or option == "Anime":
+if option == "TV Shows" or option == "Anime":
     season_path = os.path.join(show_path, f'Saison {season}')
 
     if not os.path.exists(season_path):
