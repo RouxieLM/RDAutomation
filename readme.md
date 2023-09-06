@@ -31,7 +31,7 @@ It will store those informations in the same folder as the script (plex_path, ap
 - Movies support
 - Files selector (currently, the app downloads all files present in the torrent)
 - Progress bar for downloads
-- Multiple torrent sites (currently, the app is scraping TBP)
+- Multiple torrent sites (currently, the app is scraping TPB)
 - Better search filter
 - Better path management
 - WebUI
