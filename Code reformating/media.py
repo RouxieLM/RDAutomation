@@ -13,7 +13,6 @@ def create_show_directory(root_path, media_type):
     show_name = input(f"Please provide the name of the {media_type}. This will be the name of the show's folder: ")
     if os.path.exists(root_path):
         show_path = os.path.join(root_path, media_type, show_name)
-        print(show_path)
     else:
         print("Error, plex path not found.")
         exit(1)
@@ -23,7 +22,7 @@ def create_show_directory(root_path, media_type):
     else:
         print(f"{show_path} folder already exists.")
 
-    return show_name, show_path
+    return show_path
 
 def create_season_directory(show_path):
     season = input("Please provide which season you are importing, only type a number. This will be the season's folder: ")
@@ -35,4 +34,4 @@ def create_season_directory(show_path):
     else:
         print(f'{season_path} folder already exists.')
 
-    return season_path, season
+    return season_path
