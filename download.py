@@ -4,6 +4,7 @@ import os
 import urllib.parse
 from urllib.parse import urlparse
 import json
+import subprocess
 
 url = "https://api.real-debrid.com/rest/1.0"
 
@@ -57,8 +58,5 @@ def download(rd_api, magnet, season_path):
         parsed_url = urlparse(dl_links[i])
         filename = urllib.parse.unquote(os.path.basename(parsed_url.path))
         print(f'\nDownloading {filename}...')
-        response = requests.get(dl_links[i])
-        with open(filename, "wb") as file :
-            file.write(response.content)
-        shutil.move(filename, season_path)
+        subprocess.run(['curl', '-o', os.path.join(season_path, filename), dl_links[i]])
         print(f'Downloaded {filename} successfully.')
