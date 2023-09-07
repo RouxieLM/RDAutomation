@@ -20,13 +20,12 @@ It will store those informations in the same folder as the script (plex_path, ap
 - Torrent picking within the app with name, size, trust factor and ID
 - Automatic magnet generation
 - Automatic downloads of Movies, TV Shows and Anime
-
+- Progress bar for downloads
 
 
 ## Upcoming
 
 - Files selector (currently, the app downloads all files present in the torrent)
-- Progress bar for downloads
 - Multiple torrent sites (currently, the app is scraping TPB)
 - Better search filter
 - WebUI
