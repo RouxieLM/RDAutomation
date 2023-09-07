@@ -58,5 +58,5 @@ def download(rd_api, magnet, season_path):
         parsed_url = urlparse(dl_links[i])
         filename = urllib.parse.unquote(os.path.basename(parsed_url.path))
         print(f'\nDownloading {filename}...')
-        subprocess.run(['curl', '-o', os.path.join(season_path, filename), dl_links[i]])
+        subprocess.run(['curl','-#','-o', os.path.join(season_path, filename), dl_links[i]])
         print(f'Downloaded {filename} successfully.')
