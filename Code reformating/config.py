@@ -57,3 +57,5 @@ def get_media_root():
     # Write the provided or read Plex media library path to 'plex_path' file for future use
     with open("root_path", "w") as file:
         file.write(root_path)
+
+    return root_path
