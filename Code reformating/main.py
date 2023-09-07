@@ -1,6 +1,7 @@
 from config import get_rd_api, get_media_root
 from media import create_season_directory, create_show_directory, get_media_type
 from scraper import scraper
+from download import download
 
 def main():
     
@@ -17,7 +18,9 @@ def main():
     if media_type == "TV Shows" or media_type == "Anime":
         season_path, season = create_season_directory(show_path)
 
-    scraper()
+    magnet = scraper()
+    
+    download(rd_api, magnet, season_path)
 
 if __name__ == "__main__":
     main()
