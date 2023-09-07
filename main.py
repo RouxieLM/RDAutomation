@@ -16,12 +16,13 @@ def main():
     show_path = create_show_directory(root_path, media_type)
 
     if media_type == "TV Shows" or media_type == "Anime":
-        season_path = create_season_directory(show_path)
+        show_path = create_season_directory(show_path)
 
     magnet, selected_thash = scraper()
     
     check_availability(rd_api, selected_thash)
-    download(rd_api, magnet, season_path)
+
+    download(rd_api, magnet, show_path)
 
 if __name__ == "__main__":
     main()

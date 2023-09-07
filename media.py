@@ -3,7 +3,7 @@ from pick import pick
 
 def get_media_type():
     title = "Please choose the type of media you want to import: "
-    media_type = ['TV Shows', 'Anime']
+    media_type = ['Movies', 'TV Shows', 'Anime']
 
     media_type, index = pick(media_type, title, indicator='->')
 
@@ -26,12 +26,12 @@ def create_show_directory(root_path, media_type):
 
 def create_season_directory(show_path):
     season = input("Please provide which season you are importing, only type a number. This will be the season's folder: ")
-    season_path = os.path.join(show_path, f'Season {season}')
+    show_path = os.path.join(show_path, f'Season {season}')
 
-    if not os.path.exists(season_path):
-        os.makedirs(season_path)
-        print(f"successfully created {season_path} folder.")
+    if not os.path.exists(show_path):
+        os.makedirs(show_path)
+        print(f"successfully created {show_path} folder.")
     else:
-        print(f'{season_path} folder already exists.')
+        print(f'{show_path} folder already exists.')
 
-    return season_path
+    return show_path
