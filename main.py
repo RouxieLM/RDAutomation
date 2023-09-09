@@ -1,7 +1,8 @@
 from config import get_rd_api, get_media_root
 from media import create_season_directory, create_show_directory, get_media_type
 from scraper import scraper
-from download import download, check_availability
+from download import download
+from checkAvailability import check_availability
 
 def main():
     
