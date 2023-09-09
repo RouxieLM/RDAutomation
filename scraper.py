@@ -6,7 +6,6 @@ import urllib.parse
 
 def scraper():
     qurl = "https://apibay.org/q.php?q="
-    furl = "https://apibay.org/f.php?id="
 
     print('\nYou will now search for the desired content. Try to be precise for simple show names like "Dark" for example, the search function is far from perfect for now. The app will first ask you for general terms, and then the season number if needed.\n')
     scraper_show_name = input('[Mandatory] What do you want to download ? Example : Dark x264 1080p\n')
