@@ -10,7 +10,7 @@ What you need :
 - A premium Real Debrid account and your API token which you can get here : https://real-debrid.com/apitoken
 
 The first time you will use the app, it will ask for you API token and the location of your Plex library or media folder.
-It will store those informations in the same folder as the script (plex_path, api.key and fernet.key), you API key is encrypted by fernet.key.
+It will store those informations in the same folder as the script (plex_path, api.key and fernet.key), your API key is encrypted by fernet.key.
 
 
 
