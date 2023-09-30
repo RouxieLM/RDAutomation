@@ -36,7 +36,7 @@ def get_media_root():
         with open("root_path", "r") as file:
             root_path = file.read()
     else:
-        root_path = input("It seems that the Plex path is not known by the application. Please provide the media library path. Example E:\Plex : ")
+        root_path = input("It seems that the media library path is not known by the application. Please provide the media library path. Example E:\Plex : ")
     
     with open("root_path", "w") as file:
         file.write(root_path)
