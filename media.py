@@ -5,7 +5,7 @@ def get_media_type():
     title = "Please choose the type of media you want to import: "
     media_type = ['Movies', 'TV Shows', 'Anime']
 
-    media_type, index = pick(media_type, title, indicator='->')
+    media_type = pick(media_type, title, indicator='->')
 
     return media_type
 
