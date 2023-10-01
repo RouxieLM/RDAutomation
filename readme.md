@@ -28,4 +28,5 @@ It will store those informations in the same folder as the script (plex_path, ap
 - File selector (currently, the app downloads all files present in the torrent)
 - Multiple torrent sites (currently, the app is scraping TPB)
 - Better search filter
-- WebUI
+- WebUI / UI
+- Jellyfin integration
