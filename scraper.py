@@ -57,7 +57,7 @@ def scraper():
         display_items.append(formatted_item)
 
     title = "Choose a torrent:"
-    selected_item = pick(display_items, title, indicator='->')
+    selected_item, index = pick(display_items, title, indicator='->')
 
     id_match = re.search(r'ID:\s*(\d+)', selected_item)
     selected_id = id_match.group(1)
