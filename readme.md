@@ -31,4 +31,3 @@ It will store those informations in the same folder as the script (plex_path, ap
 - Multiple torrent sites (currently, the app is scraping TPB)
 - Better search filter
 - WebUI / UI
-- Jellyfin integration
