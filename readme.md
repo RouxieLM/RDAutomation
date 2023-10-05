@@ -19,7 +19,7 @@ It will store those informations in the same folder as the script (plex_path, ap
 - Torrent search
 - Torrent picking within the app with name, size, trust factor and ID
 - Automatic magnet generation
-- Automatic downloads of Movies, TV Shows and Anime
+- Automatic download of Movies, TV Shows and Anime
 - Progress bar for downloads
 
 
