@@ -26,6 +26,7 @@ It will store those informations in the same folder as the script (plex_path, ap
 ## What I'm working on
 
 - Linux compatibility
+- Wait for Real Debrid to download the torrent if it's not cached on their servers
 - File selector (currently, the app downloads all files present in the torrent)
 - Multiple torrent sites (currently, the app is scraping TPB)
 - Better search filter
