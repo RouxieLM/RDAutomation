@@ -14,7 +14,7 @@ def create_show_directory(root_path, media_type):
     if os.path.exists(root_path):
         show_path = os.path.join(root_path, media_type, show_name)
     else:
-        print("Error, plex path not found.")
+        print(f"Error, {root_path} not found.")
         exit(1)
 
     if not os.path.exists(show_path):

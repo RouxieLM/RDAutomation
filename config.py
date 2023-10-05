@@ -35,10 +35,12 @@ def get_media_root():
     if os.path.exists("root_path"):
         with open("root_path", "r") as file:
             root_path = file.read()
+            root_path = os.path.expanduser(root_path)
     else:
-        root_path = input("It seems that the media library path is not known by the application. Please provide the media library path. Example E:\Plex : ")
+        root_path = input("It seems that the media library path is not known by the application. Please provide the media library path.\nExample E:\Media\Plex (Windows) or ~/Media/Jellyfin (Linux) :  : ")
     
     with open("root_path", "w") as file:
         file.write(root_path)
+        root_path = os.path.expanduser(root_path)
 
     return root_path
