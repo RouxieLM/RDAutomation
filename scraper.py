@@ -12,10 +12,17 @@ def scraper():
     scraper_season = input('[Optionnal] Season (only the number) : ')
 
     if scraper_season:
-        query = requests.get(qurl+scraper_show_name+' season '+scraper_season)
+        query = requests.get(qurl+scraper_show_name)
         query_json = json.loads(query.text)
-        pattern = rf'season {scraper_season}'.lower()
-        query_json = [item for item in query_json if re.search(pattern, item['name'].lower())]
+
+        if len(scraper_season) == 1:
+            pattern = rf'S0{scraper_season}|season {scraper_season}'
+        elif len(scraper_season) == 2:
+            pattern = rf'S{scraper_season}|season {scraper_season}'
+        else:
+            print("Invalid season format, please provide one or two digits only.")
+            
+        query_json = [item for item in query_json if re.search(pattern, item['name'], re.IGNORECASE)]
     else:
         query = requests.get(qurl+scraper_show_name)
         query_json = json.loads(query.text)
