@@ -34,4 +34,4 @@ It will store those informations in the same folder as the script (plex_path, ap
 
 ## Disclaimer
 
-This service is intended for legal and authorized use only. Users are responsible for ensuring they have the legal right to download and share any content through this platform. Unauthorized distribution of copyrighted material may violate applicable laws and could result in legal consequences. Please respect copyright and intellectual property rights when using this service.
+This service is intended for legal and authorized use only. Users are responsible for ensuring they have the legal right to download any content through this platform. Unauthorized distribution of copyrighted material may violate applicable laws and could result in legal consequences. Please respect copyright and intellectual property rights when using this service.
