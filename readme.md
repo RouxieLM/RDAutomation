@@ -36,5 +36,3 @@ It will store those informations in the same folder as the script (plex_path, ap
 ## Disclaimer
 
 This service is intended for legal and authorized use only. Users are responsible for ensuring they have the legal right to download any content through this platform. Unauthorized distribution of copyrighted material may violate applicable laws and could result in legal consequences. Please respect copyright and intellectual property rights when using this service.
-
-![1](https://github.com/RouxieLM/RDAutomation/assets/112493356/93636d28-f9f1-4fcb-8125-1f820a45bfae)
