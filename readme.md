@@ -1,4 +1,4 @@
-![Capture2-removebg-preview](https://github.com/RouxieLM/RDAutomation/assets/112493356/7ba7bc73-f0d4-4a89-a1f7-b7f1af740ec3)
+# RDAutomation
 
 This application allows automatic downloading and importing of movies, TV shows, and anime into a media library (Plex, Jellyfin...). It utilizes the Real Debrid API and torrent magnet links. The primary objective of this project is to facilitate the swift and automated importation of entire seasons of TV shows or anime into Plex or Jellyfin.
 
