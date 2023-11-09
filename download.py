@@ -42,8 +42,7 @@ def download(rd_api, magnet, show_path):
         print(f'\nDownloading {filename}...')
         subprocess.run(['curl','-#','-o', os.path.join(show_path, filename), dl_links[i]])
         print(f'Downloaded {filename} successfully.')
-    
-    while True:
-        user_input = input("Press any key to exit.")
-        if user_input == "":
-            exit(0)
+
+    user_input = input("Press any key to exit.")
+    if user_input == "":
+        exit(0)
